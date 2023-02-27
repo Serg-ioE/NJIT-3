@@ -20,29 +20,29 @@
 // FOR STEP 16, ADD THREE OF YOUR OWN FAVORITE MOVIES WITH METADATA TO THE END OF THE JSON FILE LIST
 */
 
-
 const vue_app = Vue.createApp({
-      // This automatically imports your movies.json file and puts it into
-      //   the variable: movies
-      created () {
-            fetch('movies.json').then(response => response.json()).then(json => {
-                  this.movies = json
-            })
-      },
-      data() {
-        return {
-            // This holds your movies.json data.
-            movies: [],
-            /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-            titleTWO: "IMDB + Sergio's Top 8 movies",
-            owner: "Sergio",
-            github: "https://github.com/Serg-ioE/NJIT-3"
-         
-      }
-    },
-      methods: {
-            /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      }
-})
+  // This automatically imports your movies.json file and puts it into
+  //   the variable: movies
+  created() {
+    fetch("movies.json")
+      .then((response) => response.json())
+      .then((json) => {
+        this.movies = json;
+      });
+  },
+  data() {
+    return {
+      // This holds your movies.json data.
+      movies: [],
+      /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+      titleTWO: "IMDB + Sergio's Top 8 movies",
+      owner: "Sergio",
+      github: "https://github.com/Serg-ioE/NJIT-3",
+    };
+  },
+  methods: {
+    /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+  },
+});
 
-vue_app.mount("#vue_app")
+vue_app.mount("#vue_app");
